@@ -1,0 +1,558 @@
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    int area_name;
+    int theatre_name;
+    int seats_booked=0;
+    char a[10][10]={{"**********"},{"**********"},{"**********"},{"**********"},{"**********"},{"**********"},{"**********"},{"**********"},{"**********"},{"**********"}};
+    int movie;
+    int r,s;
+    int choice;
+    char Name[50];
+    char Gender[10];
+    char row='A';
+    printf("Welcome to movie Ticket Booking\nWhich area do you want to watch movie?\n1.Namakkal\n2.Karur\n3.Salem\n");
+    printf("Enter your choice:\n");
+    scanf("%d",&area_name);
+    switch (area_name)
+    {
+        case 1:
+        {
+            printf("There are two theatres in Namakkal\n1.LMR Theatre\n2.KS Theatre\n");
+            printf("Which theatre do you prefer?\nEnter your choice:\n");
+            scanf("%d",&theatre_name);
+            switch (theatre_name)
+            {
+                case 1:
+                {
+                    printf("Welcome to LMR Theatre\n");
+                    printf("Enter your Name and Gender");
+                    scanf("%s\n%s",Name,Gender);
+                    printf("Which movie do you prefer?\nScreen 1:LEO\nScreen 2:Three\n");
+                    scanf("%d",&movie);
+                    switch (movie)
+                    {
+                        case 1:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        case 2:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        default:
+                        printf("Invalid Choice");
+                        break;
+                    }
+                    break;
+                }
+                case 2:
+                {
+                    printf("Welcome to KS Theatre\n");
+                    printf("Enter your Name and Gender");
+                    scanf("%s\n%s",Name,Gender);
+                    printf("Which movie do you prefer?\nScreen 1:Love Today\nScreen 2:Animal\n");
+                    scanf("%d",&movie);
+                    switch (movie)
+                    {
+                        case 1:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        case 2:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        default:
+                        printf("Invalid Choice");
+                        break;
+                    }
+                    break;
+                }
+                default:
+                printf("Invalid Choice");
+                break;
+                
+            }
+            break;
+        }
+        case 2:
+        {
+            printf("There are two theatres in Karur\n1.Ajanta Theatre\n2.Ellora Theatre\n");
+            printf("Which theatre do you prefer?\nEnter your choice:\n");
+            scanf("%d",&theatre_name);
+            switch (theatre_name)
+            {
+                case 1:
+                {
+                    printf("Welcome to Ajanta Theatre\n");
+                    printf("Enter your Name and Gender");
+                    scanf("%s\n%s",Name,Gender);
+                    printf("Which movie do you prefer?\nScreen 1:LEO\nScreen 2:Three\n");
+                    scanf("%d",&movie);
+                    switch (movie)
+                    {
+                        case 1:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        case 2:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        default:
+                        printf("Invalid Choice");
+                        break;
+                    }
+                    break;
+                }
+                case 2:
+                {
+                    printf("Welcome to Ellora Theatre\n");
+                    printf("Enter your Name and Gender");
+                    scanf("%s\n%s",Name,Gender);
+                    printf("Which movie do you prefer?\nScreen 1:Love Today\nScreen 2:Animal\n");
+                    scanf("%d",&movie);
+                    switch (movie)
+                    {
+                        case 1:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        case 2:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        default:
+                        printf("Invalid Choice");
+                        break;
+                    }
+                    break;
+                }
+                default:
+                printf("Invalid Choice");
+                break;
+            }
+            break;
+        }
+        case 3:
+        {
+            printf("There are two theatres in Salem\n1.ARRS Multiplex Theatre\n2.Viswanathan Theatre\n");
+            printf("Which theatre do you prefer?\nEnter your choice:\n");
+            scanf("%d",&theatre_name);
+            switch (theatre_name)
+            {
+                case 1:
+                {
+                    printf("Welcome to ARRS Multiplex Theatre\n");
+                    printf("Enter your Name and Gender");
+                    scanf("%s\n%s",Name,Gender);
+                    printf("Which movie do you prefer?\nScreen 1:LEO\nScreen 2:Three\n");
+                    scanf("%d",&movie);
+                    switch (movie)
+                    {
+                        case 1:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        case 2:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        default:
+                        printf("Invalid Choice");
+                        break;
+                    }
+                    break;
+                }
+                case 2:
+                {
+                    printf("Welcome to Viswanathan Theatre\n");
+                    printf("Enter your Name and Gender");
+                    scanf("%s\n%s",Name,Gender);
+                    printf("Which movie do you prefer?\nScreen 1:Love Today\nScreen 2:Animal\n");
+                    scanf("%d",&movie);
+                    switch (movie)
+                    {
+                        case 1:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        case 2:
+                        {
+                            do
+                            {
+                                printf("Available Seats:\n");
+                                for(i=0;i<10;i++)
+                                {
+                                    printf("%c",row+i);
+                                    for(j=0;j<10;j++)
+                                    {
+                                        printf("%c",a[i][j]);
+                                    }
+                                    printf("\n");
+                                }
+                                printf("Enter Row and Seat to be booked:");
+                                scanf("%d %d",&r,&s);
+                                if (a[r-1][s-1]== '*') 
+                                {    
+                                    a[r-1][s-1] = '/';
+                                    printf("Seat booked successfully!\n");
+                                    seats_booked++;
+                                }
+                                else  
+                                {
+                                    printf("Sorry, that seat is already booked. Please choose another.\n");
+                                }
+                                printf("Do you want to book another seat?\n1.Yes\n2.No\n");
+                                scanf("%d",&choice);
+                            }while(choice == 1);
+                            printf("Total Seats Booked: %d\n",seats_booked);
+                            printf("Thank you for booking");
+                            break;
+                        }
+                        default:
+                        {
+                            printf("Invalid Choice");
+                            break;
+                        }
+                    }
+                    break;
+                }
+                default:
+                {
+                    printf("Invalid Choice");
+                    break;
+                }
+            }
+            break;
+        }
+        default:
+        {
+            printf("Invalid Choice");
+            break;
+        }
+    }
+    return 0;
+}
+
